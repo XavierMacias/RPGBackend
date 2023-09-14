@@ -10,6 +10,7 @@
     "elements-seed": "node ./src/seeds/elements.seed.js",
     "magics-seed": "node ./src/seeds/magics.seed.js",
     "weapons-seed": "node ./src/seeds/weapons.seed.js",
+    "items-seed": "node ./src/seeds/items.seed.js",
     "creatures-seed": "node ./src/seeds/creatures.seed.js"
   },
   "keywords": [],
