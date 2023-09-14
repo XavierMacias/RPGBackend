@@ -16,7 +16,10 @@ const getAllCreatures = async(req,res) => {
 const getCreatureByID = async(req,res) => {
     try {
         const {id}=req.params;
-        const creatureById = await Creature.findById(id);
+        const creatureById = await Creature.findById(id).populate('element1', {"name": 1})
+                                                        .populate('element2', {"name": 1})
+                                                        .populate('magics', {"name": 1})
+                                                        .populate('posibleWeapons', {"name": 1});
         return res.status(200).json(creatureById);
     } catch (error) {
         return res.status(500).json(error);
